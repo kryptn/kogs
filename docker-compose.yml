@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    db:
+        image: postgres
+
+    gogs:
+        image: gogs/gogs
+        volumes:
+          - /var/data:/data
+        ports:
+          - "80:3000"
+        depends_on:
+          - db
