@@ -1,12 +1,26 @@
 # kogs
 
-Modify `environment` to make relevant
+Modify `environment` to make relevant:
 
-change `REMOTE_CONFIG` to your gogs address
-change `DATABASE_CONFIG` to the relevant info. i need to fix this
+* change `REMOTE_CONFIG` to your gogs address  
+* change `DATABASE_CONFIG` to the relevant info
 
 make sure you have docker and docker-compose installed
 
-to start, run:
+## Starting
 
     docker-compose up -d
+
+## Stopping
+
+    docker-compose stop
+
+## Issues
+
+* no ssh for gogs
+* separated by ports, not subdomains or w/e
+
+## To Do
+
+* automate gogs setup
+* automate some env vars
