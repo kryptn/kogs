@@ -14,6 +14,7 @@ services:
           - ./gogs:/data
         ports:
           - "31337:3000"
+          #- "22:22"
         depends_on:
           - db
 
