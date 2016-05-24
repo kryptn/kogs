@@ -1,0 +1,11 @@
+POSTGRES_PASSWORD=abcd
+POSTGRES_USER=postgres
+GOGS_DB_NAME=gogs
+GOGS_DB_USERNAME=gogs
+GOGS_DB_PASSWORD=pass
+
+
+REMOTE_DRIVER=gogs
+REMOTE_CONFIG=http://kryptn.com:31337?open=true
+#DATABASE_DRIVER=postgres
+#DATABASE_CONFIG=postgres://gogs

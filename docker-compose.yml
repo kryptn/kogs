@@ -4,7 +4,7 @@ services:
     db:        
         build:
           context: ./postgres
-        env_file: envars
+        env_file: environment
         volumes:
           - ./postgres:/usr/bin
         
@@ -16,3 +16,16 @@ services:
           - "31337:3000"
         depends_on:
           - db
+
+    drone:
+        image: drone/drone
+        volumes:
+          - ./drone:/var/lib/drone
+          - /var/run/docker.sock:/var/run/docker.sock
+        env_file: environment 
+        restart: always
+        ports:
+          - "31338:8000"
+        depends_on:
+          - db
+          - gogs
