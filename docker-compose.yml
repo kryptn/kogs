@@ -12,6 +12,8 @@ services:
         build: gogs
         volumes:
           - ./gogs:/data
+        env_file: environment
+        restart: always
         ports:
           - "31337:3000"
           #- "22:22"
@@ -30,3 +32,11 @@ services:
         depends_on:
           - db
           - gogs
+
+    nginx:
+        build: nginx
+        ports:
+          - "80:80"
+        depends_on:
+          - gogs
+          - drone
