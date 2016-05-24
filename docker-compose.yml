@@ -2,11 +2,12 @@ version: '2'
 
 services:
     db:        
-        image: postgres
-        env_file: ./postgres/envars
+        build:
+          context: ./postgres
+        env_file: envars
         volumes:
           - ./postgres:/usr/bin
-        #entrypoint: /usr/bin/init-pg.sh
+        
     gogs:
         build: gogs
         volumes:
