@@ -1,10 +1,14 @@
 version: '2'
 
 services:
-    db:
+    db:        
         image: postgres
+        env_file: ./postgres/envars
+        volumes:
+          - ./postgres:/usr/bin
+        #entrypoint: /usr/bin/init-pg.sh
     gogs:
-        image: gogs/gogs
+        build: gogs
         volumes:
           - ./gogs:/data
         ports:
