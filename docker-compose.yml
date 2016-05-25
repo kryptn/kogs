@@ -14,8 +14,8 @@ services:
           - ./gogs:/data
         env_file: environment
         restart: always
-        ports:
-          - "31337:3000"
+        #ports:
+        #  - "31337:3000"
           #- "22:22"
         depends_on:
           - db
@@ -27,8 +27,8 @@ services:
           - /var/run/docker.sock:/var/run/docker.sock
         env_file: environment 
         restart: always
-        ports:
-          - "31338:8000"
+        #ports:
+        #  - "31338:8000"
         depends_on:
           - db
           - gogs
