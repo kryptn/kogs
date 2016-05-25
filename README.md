@@ -18,9 +18,10 @@ make sure you have docker and docker-compose installed
 ## Issues
 
 * no ssh for gogs
-* separated by ports, not subdomains or w/e
 
 ## To Do
 
 * automate gogs setup
 * automate some env vars
+* letsencrypt? ssl? i have nginx already, ssl would be easy
+* squid to foward ssh? no clue on this one
