@@ -13,6 +13,6 @@ DRONE_DB_PASSWORD=pass
 DRONE_PORT=31338
 
 REMOTE_DRIVER=gogs
-REMOTE_CONFIG=http://kryptn.com:31337?open=true
+REMOTE_CONFIG=http://git.kryptn.com?open=true
 DATABASE_DRIVER=postgres
 DATABASE_CONFIG=postgres://gogs:pass@db:5432/gogs?sslmode=disable
