@@ -30,7 +30,9 @@ services:
           - gogs
 
     nginx:
-        build: nginx
+        image: nginx
+        volumes:
+          - ./nginx:/etc/nginx
         ports:
           - "80:80"
         depends_on:
